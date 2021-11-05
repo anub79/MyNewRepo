@@ -1,0 +1,12 @@
+package com.app.utils.pack;
+
+import org.openqa.selenium.WebDriver;
+
+public class takeScreenshot {
+	public static String getScreenshot(WebDriver driver) {
+		
+		return null;
+		
+	}
+
+}

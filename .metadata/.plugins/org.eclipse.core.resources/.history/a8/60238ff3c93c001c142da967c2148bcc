@@ -1,0 +1,25 @@
+package com.app.pages.pack;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Base {
+	public static WebDriver driver;
+	@BeforeTest
+	public void SetUp() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://www.google.com");
+		
+	}
+	@AfterTest
+	public void teardown() {
+		driver.close();
+		
+	}
+
+}
